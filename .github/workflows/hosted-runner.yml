@@ -1,20 +1,17 @@
-#runs-on: ubuntu-latest → Automatically runs on a GitHub-provided VM
-name: CI Pipeline
+name: CI Pipeline on Self-Hosted Runner
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # GitHub-hosted Linux runner
+    runs-on: [self-hosted, amazonlinux, dev]  # Matches labels of self-hosted runner
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Build
-        run: echo "Building the project on a GitHub-hosted runner"
+        run: echo "Building on self-hosted runner"
 
       - name: Test
-        run: echo "Running tests on GitHub-hosted runner"
+        run: echo "Testing on self-hosted runner"
