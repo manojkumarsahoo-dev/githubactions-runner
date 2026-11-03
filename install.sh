@@ -11,8 +11,7 @@ curl -o actions-runner-linux-x64-2.336.0.tar.gz -L https://github.com/actions/ru
 tar xzf ./actions-runner-linux-x64-2.336.0.tar.gz
 
 # 4. Configure runner (from GitHub UI)
-./config.sh --url https://github.com/CloudTechDevOps/github-actions-tf --token BDB5WAUDP46LWV7D4GSS6KTKOB4G2 --labels amazonlinux,dev --name ec2-runner
-
+./config.sh --url https://github.com/manojkumarsahoo-dev/aws-python-app-github-actions-deployment --token BXI4FLYZIVPJVMZSMVXG5XLK5HGZA
 # 5. Start runner
 ./run.sh &
 
