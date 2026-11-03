@@ -1,4 +1,3 @@
-```hcl
 terraform {
   backend "s3" {
     bucket       = "my-app-tf-state-manoj"
@@ -8,4 +7,3 @@ terraform {
     use_lockfile = true
   }
 }
-```
